@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dolf — Your card. Your crew. Your tags.</title>
+<meta name="description" content="Dolf is a disc golf scorekeeping app: one shared card, live leaderboards, bag tag exchanges, and token payouts handled automatically.">
+<meta property="og:title" content="Dolf — disc golf scorekeeping">
+<meta property="og:description" content="One shared card, live leaderboards, bag tags and payouts handled automatically.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico">
+<style>
+  :root{
+    --paper:#FBFBF8; --ink:#15161A; --muted:#6B6B72; --line:#E4E4DE;
+    --pink:#FF2E92; --gold:#F5B301; --cyan:#00BFD4; --lime:#9BE000; --purple:#6C4BF6;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.5;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:32px 24px 64px}
+  .brand{display:flex; align-items:center; gap:14px; margin-bottom:8px}
+  .mark{
+    width:72px; height:72px; border-radius:18px; background:var(--pink);
+    border:3px solid var(--ink); box-shadow:4px 4px 0 var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-size:38px; font-weight:800; color:#fff; flex:none;
+  }
+  h1{font-size:52px; line-height:1; letter-spacing:-1.5px; margin:0; font-weight:800}
+  .tagline{color:var(--muted); font-size:17px; margin:10px 0 22px}
+  .badges{display:flex; gap:10px; margin:0 0 28px}
+  .badge{
+    width:46px; height:46px; border:3px solid var(--ink); border-radius:12px;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:17px;
+  }
+  .lede{font-size:19px; margin:0 0 26px; max-width:60ch}
+  .cta{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:44px}
+  .btn{
+    display:inline-block; text-decoration:none; font-weight:800; font-size:16px;
+    padding:15px 24px; border:3px solid var(--ink); border-radius:14px;
+    box-shadow:4px 4px 0 var(--ink); transition:transform .06s ease, box-shadow .06s ease;
+  }
+  .btn:active{transform:translate(2px,2px); box-shadow:2px 2px 0 var(--ink)}
+  .btn-primary{background:var(--pink); color:#fff}
+  .btn-secondary{background:#fff; color:var(--ink)}
+  h2{
+    font-size:13px; text-transform:uppercase; letter-spacing:1.5px;
+    color:var(--muted); margin:0 0 14px; font-weight:800;
+  }
+  .cards{display:grid; gap:14px; grid-template-columns:1fr; margin-bottom:40px}
+  @media(min-width:620px){ .cards{grid-template-columns:1fr 1fr} }
+  .card{
+    background:#fff; border:3px solid var(--ink); border-radius:16px; padding:18px;
+    box-shadow:4px 4px 0 var(--ink);
+  }
+  .card .chip{
+    display:inline-block; font-size:11px; font-weight:800; letter-spacing:1px;
+    text-transform:uppercase; padding:4px 9px; border:2px solid var(--ink);
+    border-radius:8px; margin-bottom:10px;
+  }
+  .card h3{margin:0 0 6px; font-size:18px; font-weight:800}
+  .card p{margin:0; color:var(--muted); font-size:15px}
+  .strip{
+    background:var(--ink); color:#fff; border-radius:16px; padding:22px;
+    margin-bottom:40px;
+  }
+  .strip h3{margin:0 0 6px; font-size:20px; font-weight:800}
+  .strip p{margin:0; color:#C9C9C4; font-size:15px}
+  footer{border-top:2px solid var(--line); padding-top:20px; color:var(--muted); font-size:14px}
+  footer a{color:var(--ink); font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="mark">D</div>
+      <h1>Dolf</h1>
+    </div>
+    <p class="tagline">Your card. Your crew. Your tags.</p>
+
+    <div class="badges" aria-hidden="true">
+      <div class="badge" style="background:var(--cyan)">9</div>
+      <div class="badge" style="background:var(--lime)">5</div>
+      <div class="badge" style="background:var(--purple); color:#fff">-1</div>
+      <div class="badge" style="background:var(--gold)">2</div>
+    </div>
+
+    <p class="lede">
+      Disc golf scorekeeping built for the way you actually play — one shared card,
+      everyone's scores live on the same leaderboard, and your bag tags and token
+      payouts sorted the moment the round ends.
+    </p>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="https://app.getdolf.com">Open the app</a>
+      <a class="btn btn-secondary" href="#features">See what it does</a>
+    </div>
+  </header>
+
+  <main>
+    <h2 id="features">What it does</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="chip" style="background:var(--cyan)">Live</span>
+        <h3>One shared card</h3>
+        <p>Add your crew, score hole by hole in honors order, and everyone sees the
+           same leaderboard in real time — even across separate cards in a group.</p>
+      </div>
+      <div class="card">
+        <span class="chip" style="background:var(--gold)">Tags</span>
+        <h3>Bag tags, handled</h3>
+        <p>Tags redistribute automatically by finish, with the rule built in: they
+           only move if the card finishes with at least two players.</p>
+      </div>
+      <div class="card">
+        <span class="chip" style="background:var(--lime)">Payouts</span>
+        <h3>Token payouts</h3>
+        <p>Put tokens on the line and Dolf works out the split — a clean ladder,
+           money back for last cash, and ties divided fairly.</p>
+      </div>
+      <div class="card">
+        <span class="chip" style="background:var(--purple); color:#fff">Stats</span>
+        <h3>Track your game</h3>
+        <p>Optional shot-by-shot mode logs fairways, penalties and putts, then shows
+           your C1x, C2 and scoring trends round over round.</p>
+      </div>
+    </div>
+
+    <div class="strip">
+      <h3>Works offline, syncs when you're back</h3>
+      <p>Scores queue up when the course has no signal and sync the moment it returns.
+         No lost holes, no arguments on the walk out.</p>
+    </div>
+
+    <h2>Get playing</h2>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://app.getdolf.com">Play in your browser</a>
+      <a class="btn btn-secondary" href="#">Get the iPhone app</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Dolf — disc golf scorekeeping. Built for weekly tag rounds.</p>
+    <p>
+      <a href="https://app.getdolf.com">Open the app &rarr;</a>
+      &nbsp;·&nbsp; <a href="privacy.html">Privacy</a>
+      &nbsp;·&nbsp; <a href="terms.html">Terms</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
