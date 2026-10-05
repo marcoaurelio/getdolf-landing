@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dolf — Your card. Your crew. Your tags.</title>
-<meta name="description" content="Dolf is a disc golf scorekeeping app: one shared card, live leaderboards, bag tag exchanges, and token payouts handled automatically.">
-<meta property="og:title" content="Dolf — disc golf scorekeeping">
+<title>Dolf — Disc golf scorekeeping app</title>
+<meta name="description" content="Dolf is a disc golf scorekeeping app for rounds, bag tags, clubs, leagues and events: one shared card, live leaderboards, bag tag exchanges, and token payouts handled automatically.">
+<meta property="og:title" content="Dolf — disc golf scorekeeping app">
 <meta property="og:description" content="One shared card, live leaderboards, bag tags and payouts handled automatically.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.ico">
@@ -62,6 +62,8 @@
   }
   .card h3{margin:0 0 6px; font-size:18px; font-weight:800}
   .card p{margin:0; color:var(--muted); font-size:15px}
+  .about{margin:0 0 40px}
+  .about p{margin:0 0 12px; font-size:16px; max-width:62ch}
   .strip{
     background:var(--ink); color:#fff; border-radius:16px; padding:22px;
     margin-bottom:40px;
@@ -77,7 +79,7 @@
 
   <header>
     <div class="brand">
-      <div class="mark">D</div>
+      <div class="mark" aria-hidden="true">D</div>
       <h1>Dolf</h1>
     </div>
     <p class="tagline">Your card. Your crew. Your tags.</p>
@@ -102,6 +104,16 @@
   </header>
 
   <main>
+    <section class="about" aria-labelledby="about">
+      <h2 id="about">What is Dolf?</h2>
+      <p>Dolf is a disc golf scorekeeping app. Use it to keep score for your rounds,
+         track bag tags, and run clubs, leagues and events — from a casual round with
+         friends to a weekly tag night.</p>
+      <p>You sign in with Apple, Google or your email address so your scores, tags and
+         stats follow you from round to round. Dolf is free, shows no ads, and runs in your
+         browser at app.getdolf.com.</p>
+    </section>
+
     <h2 id="features">What it does</h2>
     <div class="cards">
       <div class="card">
@@ -144,11 +156,12 @@
   </main>
 
   <footer>
-    <p>Dolf — disc golf scorekeeping. Built for weekly tag rounds.</p>
+    <p>Dolf — disc golf scorekeeping for rounds, bag tags, clubs, leagues and events.</p>
     <p>
       <a href="https://app.getdolf.com">Open the app &rarr;</a>
-      &nbsp;·&nbsp; <a href="privacy.html">Privacy</a>
-      &nbsp;·&nbsp; <a href="terms.html">Terms</a>
+      &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a>
+      &nbsp;·&nbsp; <a href="/terms.html">Terms of Service</a>
+      &nbsp;·&nbsp; <a href="mailto:support@getdolf.com">support@getdolf.com</a>
     </p>
   </footer>
 
