@@ -8,7 +8,10 @@
 <meta property="og:title" content="Dolf — disc golf scorekeeping app">
 <meta property="og:description" content="One shared card, live leaderboards, bag tags and payouts handled automatically.">
 <meta property="og:type" content="website">
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
   :root{
     --paper:#FBFBF8; --ink:#15161A; --muted:#6B6B72; --line:#E4E4DE;
@@ -25,9 +28,9 @@
   .mark{
     width:72px; height:72px; border-radius:18px; background:var(--pink);
     border:3px solid var(--ink); box-shadow:4px 4px 0 var(--ink);
-    display:flex; align-items:center; justify-content:center;
-    font-size:38px; font-weight:800; color:#fff; flex:none;
+    overflow:hidden; flex:none;
   }
+  .mark svg{display:block; width:100%; height:100%}
   h1{font-size:52px; line-height:1; letter-spacing:-1.5px; margin:0; font-weight:800}
   .tagline{color:var(--muted); font-size:17px; margin:10px 0 22px}
   .badges{display:flex; gap:10px; margin:0 0 28px}
@@ -79,7 +82,9 @@
 
   <header>
     <div class="brand">
-      <div class="mark" aria-hidden="true">D</div>
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 1024 1024" focusable="false"><g transform="translate(-11.264,64) scale(0.896)"><path d="M300,153.59 A400,400 0 1 1 300,846.41 Z M300,500 a200,200 0 1 0 400,0 a200,200 0 1 0 -400,0 Z" fill="#15161A" fill-rule="evenodd"/><path d="M300,500 a200,200 0 1 0 400,0 a200,200 0 1 0 -400,0 Z M432.9,500 a67.1,67.1 0 1 0 134.2,0 a67.1,67.1 0 1 0 -134.2,0 Z" fill="#F5B301" fill-rule="evenodd"/><path d="M300,153.59 A400,400 0 0 1 300,846.41 Z" fill="#15161A"/></g></svg>
+      </div>
       <h1>Dolf</h1>
     </div>
     <p class="tagline">Your card. Your crew. Your tags.</p>
